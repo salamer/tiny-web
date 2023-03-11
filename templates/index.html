@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FlaskApp</title>
+    <style>
+        img {
+            max-height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello World!</h1>
+    <form enctype="multipart/form-data" method="post" action="/upload">
+        <input id="fileupload" name="file" type="file" />
+        <input type="submit" value="submit" id="submit" />
+    </form>
+    {% for record in records %}
+    <br>
+    <h3>{{record["name"].raw}}</h3>
+    {% if record['image'].raw %}
+    <div>
+        original image
+        <img src="{{record['image'].raw}}" />
+    </div>
+    {% endif %}
+    <div>
+        {% if record['images'].raw %}
+        face
+        {% for face in record['images'].raw %}
+        <img src="{{face}}" />
+        {% endfor %}
+        {% endif %}
+    </div>
+
+    <br>
+    {% endfor %}
+</body>
+
+</html>
