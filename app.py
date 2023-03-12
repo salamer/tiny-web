@@ -19,7 +19,7 @@ def hello():
 
     data = table.select()
     print(data[0]['images'].raw)
-    return render_template('index.html', records=data)
+    return render_template('index.html', records=data[::-1])
 
 
 @app.route("/upload", methods=['POST'])
