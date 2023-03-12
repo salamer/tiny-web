@@ -1,4 +1,4 @@
-FROM kaithregistry.azurecr.io/serving-basic:v13
+FROM kaithregistry.azurecr.io/serving-basic:v16
 ENV PYTHONUNBUFFERED True
 ENV PYTHONPATH "${PYTHONPATH}:/app"
 ENV APP_HOME /app
@@ -10,5 +10,5 @@ RUN apt-get update && \
     apt-get -y install \
     git
 RUN git clone https://github.com/salamer/tiny-web
-RUN ["chmod", "+x", "/app/tiny-web/run.sh"]
-ENTRYPOINT ["/bin/bash" ,"/app/tiny-web/run.sh"]
+# RUN ["chmod", "+x", "/app/tiny-web/run.sh"]
+# ENTRYPOINT ["/bin/bash" ,"/app/tiny-web/run.sh"]

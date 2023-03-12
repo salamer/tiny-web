@@ -5,7 +5,7 @@ import base64
 from io import BytesIO
 from PIL import Image
 
-kaith = Kaith("http://localhost:8080")
+kaith = Kaith("http://kaith-service.4a6b1f6298f847ad8268.japaneast.aksapp.io")
 table = kaith.table(
     repo_id="1634603081188511745",
     table_id="1634603498353987584",
