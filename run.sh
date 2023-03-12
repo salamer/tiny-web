@@ -1,2 +1,2 @@
 #/bin/bash
-python app.py
+python /app/tiny-web/app.py
