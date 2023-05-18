@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect
 import base64
 from io import BytesIO
 
+app = Flask(__name__)
 
 @app.route('/')
 def hello():
