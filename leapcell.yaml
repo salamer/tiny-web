@@ -1,3 +1,4 @@
 python:
   type: wsgi
-  app: app.app
+  app_file: app.py
+  app: app
