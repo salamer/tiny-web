@@ -9,7 +9,7 @@ def hello():
     return {"hello": "world"}
 
 @app.route("/xx")
-def app():
+def xx():
     return {"qq":"xx"}
 
 if __name__ == "__main__":
