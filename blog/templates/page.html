@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FlaskApp</title>
+</head>
+
+<body>
+    <div style="padding: 10px; background-color: #EEE; margin: 20px">
+        <img src="{{ blog.cover }}" alt="{{ blog.title }}"
+            style="width: 100px; height: 100px; float: left; margin-right: 10px;">
+        <h2>{{ blog.title }}</h2>
+        <div>
+            {% for tag in blog.tag %}
+            <a href="/label/{{tag}}" style="padding: 10px;">
+                <span>
+                    {{ tag }}
+                </span>
+            </a>
+            {% endfor %}
+        </div>
+        <p>{{ blog.content }}</p>
+    </div>
+</body>
+
+</html>
